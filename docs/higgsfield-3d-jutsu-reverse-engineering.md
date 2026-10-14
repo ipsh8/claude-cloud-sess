@@ -371,11 +371,14 @@ model does the rest. That loses GLB/character import but needs no server-side
 ## 9. What could not be determined
 
 - The text of `blocking_studio_guide` (the agent's authoring rules) and the
-  system prompt.
+  system prompt. See `higgsfield-3d-jutsu-agent-prompts.md` for everything
+  that *is* recoverable: the first-message template, the persona key, the
+  Blender add-on's hidden host context, the vendored Blender authoring
+  rulebook, the sandbox, tool labels and a reconstructed guide.
 - The Blender version, GPU/CPU, timeouts and sandboxing of the runner.
 - The exact prompt/parameters used when the previz clip is sent to Seedance
   2.5 (which model slot: text2video with video reference vs motion control).
 - The host behind `/curated-assets` (built by a helper in a chunk that was not
   resolvable from the static bundle).
-- Tool-status label strings for `blocking_studio_*` (their i18n ids are not
-  in the public translation files for the two routes fetched).
+- (Resolved) Tool-status labels for `blocking_studio_*` are in
+  `higgsfield-3d-jutsu-agent-prompts.md` §6.
