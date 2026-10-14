@@ -1,0 +1,42 @@
+{
+  "name": "AD02 · SIZAREV duo · pink star sunglasses toss · 12s timecoded (Higgsfield replication)",
+  "base_dir": "../../../../references/sizarev-3d-workflow",
+  "steps": [
+    {
+      "id": "woman_white",
+      "endpoint": "alibaba/qwen-image-3/edit",
+      "reuse_file": "assets/A3_nanobanana_woman_white_studio.png",
+      "params": {
+        "prompt": "@text:prompts/plain/woman_white_studio.txt",
+        "image_urls": ["@file:assets/A1_input_woman_original.png"],
+        "resolution": "2k", "aspect_ratio": "16:9"
+      }
+    },
+    {
+      "id": "man_white",
+      "endpoint": "alibaba/qwen-image-3/edit",
+      "reuse_file": "assets/B2_nanobanana_man_white_studio.png",
+      "params": {
+        "prompt": "@text:prompts/plain/man_white_studio.txt",
+        "image_urls": ["@file:assets/B1_input_man_original.png"],
+        "resolution": "2k", "aspect_ratio": "16:9"
+      }
+    },
+    {
+      "id": "video",
+      "kind": "video",
+      "note": "Seedance 2.5 reference-to-video: images [woman, bag, man, sunglasses] in the same order as the Arcads node, video = 3D duo animatic",
+      "endpoint": "bytedance/seedance-2.5/reference-to-video",
+      "params": {
+        "prompt": "@text:prompts/plain/ad02_seedance_v2.txt",
+        "image_urls": ["@step:woman_white", "@file:assets/A2_input_diesel_bag.png", "@step:man_white", "@file:assets/B3_input_pink_star_sunglasses.png"],
+        "video_urls": ["@file:assets/B4_3d_animatic_bolt_duo.mp4"],
+        "duration": 12,
+        "resolution": "1080p",
+        "aspect_ratio": "16:9",
+        "bitrate_mode": "high",
+        "generate_audio": true
+      }
+    }
+  ]
+}

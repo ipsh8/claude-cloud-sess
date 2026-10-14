@@ -1,0 +1,9 @@
+Use @Video1 strictly as the motion and camera reference: copy the walk cycle, step timing, body posture, arm positions and the exact camera choreography frame-for-frame — smooth tracking shot in front of her, then two fast robotic bolt-cam snap push-ins to her face with hard stops and short holds, fast pull-outs, then a quick whip orbit to the right while the camera keeps following her as she continues walking. Do not copy the blocky 3D look, proportions or materials from @Video1.
+
+Replace the 3D character with the real woman from @Image1: same face, sleek black bob with heavy fringe, amber-tinted sunglasses, black fuzzy mohair crew-neck sweater over a white shirt with pointed collar and long white cuffs showing, black high-waisted wide-leg trousers, pointed snakeskin-print shoes. Keep her identity and outfit exactly as in @Image1. Her left hand stays in her trouser pocket the whole time.
+
+In her right hand she carries the bag from @Image2, held by its two black top handles, swinging naturally with her steps. Reproduce the bag exactly: washed charcoal-black worn canvas, white "1978 DIESEL FOR SUCCESSFUL LIVING" print with the white hand-drawn mark and "ONLY THE BRAVE" text below, metal eyelets, silver buckle clips on the straps, side zips, loose strap ends. Correct size relative to her body, real weight and physics.
+
+Setting: the seamless warm-grey paper studio from @Image1, soft directional key light from the left, darker falloff to the right, natural soft floor shadow. Editorial fashion film look, 35mm, slight film grain, muted warm grade, realistic motion blur on the fast camera moves. 10 seconds, 16:9, 1080p.
+
+Avoid: changing her face or outfit, bag in the wrong hand, extra bags, warped or misspelled bag text, morphing hands, sliding feet, the 3D blocky style, extra people, logos other than the bag print.

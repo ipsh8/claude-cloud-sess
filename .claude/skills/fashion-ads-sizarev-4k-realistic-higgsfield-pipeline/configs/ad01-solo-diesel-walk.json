@@ -1,0 +1,35 @@
+{
+  "name": "AD01 · SIZAREV solo walk · Diesel bag · bolt-cam (Higgsfield replication)",
+  "base_dir": "../../../../references/sizarev-3d-workflow",
+  "steps": [
+    {
+      "id": "woman_white",
+      "note": "White-studio cleanup of the woman (Arcads: GPT -> Nano Banana 2.1). API has no Nano Banana, so Qwen Image 3 Edit; or reuse the original Nano Banana output.",
+      "endpoint": "alibaba/qwen-image-3/edit",
+      "reuse_file": "assets/A3_nanobanana_woman_white_studio.png",
+      "params": {
+        "prompt": "@text:prompts/plain/woman_white_studio.txt",
+        "image_urls": ["@file:assets/A1_input_woman_original.png"],
+        "resolution": "2k",
+        "aspect_ratio": "16:9",
+        "negative_prompt": "changed face, changed outfit, extra objects, cropped feet, cropped bag"
+      }
+    },
+    {
+      "id": "video",
+      "kind": "video",
+      "note": "Seedance 2.5 reference-to-video: @Image1 woman, @Image2 bag, @Video1 3D animatic (camera only)",
+      "endpoint": "bytedance/seedance-2.5/reference-to-video",
+      "params": {
+        "prompt": "@text:prompts/plain/ad01_seedance_v2.txt",
+        "image_urls": ["@step:woman_white", "@file:assets/A2_input_diesel_bag.png"],
+        "video_urls": ["@file:assets/A4_3d_animatic_bolt_cam_walk.mp4"],
+        "duration": 10,
+        "resolution": "1080p",
+        "aspect_ratio": "16:9",
+        "bitrate_mode": "high",
+        "generate_audio": true
+      }
+    }
+  ]
+}

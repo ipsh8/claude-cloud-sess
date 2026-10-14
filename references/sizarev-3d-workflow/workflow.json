@@ -1,0 +1,759 @@
+{
+ "source": "https://app.arcads.ai/flow/public/6wsiDNWJAeHP0iafdSjT3T0p",
+ "name": "3D workflow",
+ "creator": "SIZAREV",
+ "workflow": {
+  "view": {
+   "x": 0,
+   "y": 0
+  },
+  "nodes": [
+   {
+    "id": "ae4456fa-a4ba-40c9-a81b-0a467b85f79e",
+    "position": {
+     "x": -608.174754284305,
+     "y": -294.7912180333772
+    },
+    "type": "inputVideo",
+    "params": {
+     "label": ""
+    },
+    "output": {
+     "selectedAssetId": "be433336-7ba8-42cf-8e4b-3a82ea5163d8",
+     "assetIds": [
+      "be433336-7ba8-42cf-8e4b-3a82ea5163d8"
+     ]
+    },
+    "inputs": {}
+   },
+   {
+    "id": "af76b13d-5709-4df9-aed0-08da55359e61",
+    "position": {
+     "x": -1073.5071814542775,
+     "y": -285.0809092206717
+    },
+    "type": "inputImage",
+    "params": {
+     "label": ""
+    },
+    "output": {
+     "selectedAssetId": "386b22ad-750e-4dfb-b09a-776e12e96845",
+     "assetIds": [
+      "386b22ad-750e-4dfb-b09a-776e12e96845"
+     ]
+    },
+    "inputs": {}
+   },
+   {
+    "id": "7eaa011a-a2b5-475f-8a9c-75ef316724e9",
+    "position": {
+     "x": -608.174754284305,
+     "y": 393.5434025616552
+    },
+    "type": "inputImage",
+    "params": {
+     "label": ""
+    },
+    "output": {
+     "selectedAssetId": "6fbb6b70-ecc1-4577-8ecb-c3b438a085df",
+     "assetIds": [
+      "6fbb6b70-ecc1-4577-8ecb-c3b438a085df"
+     ]
+    },
+    "inputs": {}
+   },
+   {
+    "id": "0a11044b-665b-44bb-829f-bdf4ac4ec3bc",
+    "position": {
+     "x": -233.99999999999986,
+     "y": 71.25486152667429
+    },
+    "type": "generateVideo",
+    "params": {
+     "label": "",
+     "model": "seedance_25",
+     "prompt": "",
+     "duration": 10,
+     "resolution": "720p",
+     "aspectRatio": "16:9",
+     "bitrateMode": "high",
+     "audioEnabled": true
+    },
+    "output": {
+     "selectedAssetId": "c50766a6-3894-436e-8e5a-cab1dee9bb2c",
+     "assetIds": [
+      "843a7f83-58e1-466e-b806-2a8ced2dd78c",
+      "c50766a6-3894-436e-8e5a-cab1dee9bb2c"
+     ]
+    },
+    "inputs": {
+     "prompt": "0ab5d624-fa4e-418e-862f-44f241ef630b",
+     "referenceImages": [
+      "7eaa011a-a2b5-475f-8a9c-75ef316724e9",
+      "bfd4263f-56bf-4f9a-a603-b573ff72dea4"
+     ],
+     "referenceVideos": [
+      "ae4456fa-a4ba-40c9-a81b-0a467b85f79e"
+     ]
+    }
+   },
+   {
+    "id": "0ab5d624-fa4e-418e-862f-44f241ef630b",
+    "position": {
+     "x": -217.8561502088353,
+     "y": -260.6829613500339
+    },
+    "type": "prompt",
+    "params": {
+     "prompt": "@Image1 — the person: keep her face, skin tone, hairstyle and outfit exactly as in the photo.\n@Image2 — the bag: use this exact Diesel bag (shape, size, material, color, logo, hardware, straps). Do not redesign it or change the logo.\n@Video1 — camera only: copy only the camera path, framing, timing and speed of the camera moves. Take nothing else from this video (no character, no body motion, no style, no lighting).\n\nScene: a seamless white photo studio with a soft white cyclorama, even diffused light and soft contact shadows under her feet. Clean high-end fashion editorial look.\n\nSubject: a young woman with a sleek black bob and a heavy blunt fringe. She wears oversized amber-brown tinted sunglasses, a small silver earring, an oversized fuzzy black mohair crew-neck sweater, and a crisp white shirt underneath. The shirt's pointed collar sits over the neckline and its long white cuffs stick out below the sleeves. She also wears high-waisted black pleated wide-leg trousers that fall to the floor and pointed snakeskin-print shoes.\n\nAction: she walks toward the camera with a natural, calm, elegant runway gait. Her steps are even and her feet plant firmly on the floor. Her body moves smoothly and fluidly, with no twitching. Her right hand carries the Diesel bag from @Image2 by its handles, and it swings gently with realistic weight. Her left hand stays in her trouser pocket the whole time, with the white cuff visible.\n\nCamera: a bolt-cam robotic arm move that follows the camera path of @Video1. It tracks her walk, glides fast into an extreme close-up of her eye behind the amber lens with a shallow depth of field, pulls back out, then makes a sweeping orbit to her right while she keeps walking. Every move is perfectly smooth, like a motion-control rig: dynamic speed with eased acceleration and deceleration. There is zero camera shake, zero jitter, no handheld feel and no wobble.\n\nStyle: photorealistic, 1080p, 60fps, silky smooth motion, natural skin texture, true fabric detail, accurate snakeskin pattern, accurate Diesel branding exactly as in @Image2.\n\nNegative: camera shake, jitter, stutter, frame skipping, flicker, the body motion or character from @Video1, beige tote, any other bag, changed logo, extra hands, the hand coming out of the pocket, face morphing, warped legs, sliding feet, text"
+    },
+    "output": {
+     "selectedAssetId": null
+    },
+    "inputs": {}
+   },
+   {
+    "id": "80cb1c75-22f3-47ec-8322-dabfaa7b54b8",
+    "position": {
+     "x": 120.18693616221458,
+     "y": 86.7152715826576
+    },
+    "type": "upscale",
+    "params": {
+     "label": "",
+     "quality": "fast",
+     "upscaleFactor": 2,
+     "targetResolution": "1080p"
+    },
+    "output": {
+     "selectedAssetId": "a819bb46-7bf2-4054-a7ad-0d202dda7b62",
+     "assetIds": [
+      "2ae6ea5c-627f-42f4-add2-fc98aa817da0",
+      "a819bb46-7bf2-4054-a7ad-0d202dda7b62"
+     ]
+    },
+    "inputs": {
+     "referenceVideos": [
+      "0a11044b-665b-44bb-829f-bdf4ac4ec3bc"
+     ]
+    }
+   },
+   {
+    "id": "c90ed531-856f-4323-bb81-6225c5128436",
+    "position": {
+     "x": -608.174754284305,
+     "y": -401.14236307154505
+    },
+    "type": "prompt",
+    "params": {
+     "prompt": "Made in Claude not blender"
+    },
+    "output": {
+     "selectedAssetId": null
+    },
+    "inputs": {}
+   },
+   {
+    "id": "bfd4263f-56bf-4f9a-a603-b573ff72dea4",
+    "position": {
+     "x": -608.174754284305,
+     "y": 34.24879076948804
+    },
+    "type": "generateImage",
+    "params": {
+     "label": "",
+     "model": "nano-banana-2-1",
+     "prompt": "",
+     "resolution": "2K",
+     "aspectRatio": "16:9",
+     "thinkingLevel": "HIGH",
+     "searchGrounding": false
+    },
+    "output": {
+     "selectedAssetId": "f227a162-4e16-4e1a-9b5b-800bc39a4c55",
+     "assetIds": [
+      "f227a162-4e16-4e1a-9b5b-800bc39a4c55"
+     ]
+    },
+    "inputs": {
+     "prompt": "8687368c-db26-4ec5-938a-d4f99d8cfb97",
+     "referenceImages": [
+      "af76b13d-5709-4df9-aed0-08da55359e61"
+     ]
+    }
+   },
+   {
+    "id": "8687368c-db26-4ec5-938a-d4f99d8cfb97",
+    "position": {
+     "x": -1138.1609324388587,
+     "y": 123.78759805889715
+    },
+    "type": "workflowLlm",
+    "params": {
+     "label": "",
+     "model": "gpt-6-sol",
+     "prompt": "make this wooman on white background. make prompt for nano banana 2.1"
+    },
+    "output": {
+     "selectedAssetId": "2d99f5c6-2aa7-4fa3-bc8f-b97a15f03fa3",
+     "assetIds": [
+      "2d99f5c6-2aa7-4fa3-bc8f-b97a15f03fa3"
+     ]
+    },
+    "inputs": {
+     "referenceImages": [
+      "af76b13d-5709-4df9-aed0-08da55359e61"
+     ]
+    }
+   },
+   {
+    "id": "c592c090-b47e-47e0-b8c9-c44758bd612a",
+    "position": {
+     "x": 664.3358497196737,
+     "y": 492.28091520222165
+    },
+    "type": "inputImage",
+    "params": {
+     "label": ""
+    },
+    "output": {
+     "selectedAssetId": "7b76aacf-dc0a-4da4-bd8f-082ceb2af0c7",
+     "assetIds": [
+      "7b76aacf-dc0a-4da4-bd8f-082ceb2af0c7"
+     ]
+    },
+    "inputs": {}
+   },
+   {
+    "id": "5a821a9a-6df2-4667-a319-d7563e1b7ffd",
+    "position": {
+     "x": 1743.6438932654105,
+     "y": 736.2548615266743
+    },
+    "type": "generateImage",
+    "params": {
+     "label": "",
+     "model": "nano-banana-2-1",
+     "prompt": "",
+     "resolution": "2K",
+     "aspectRatio": "16:9",
+     "thinkingLevel": "HIGH",
+     "searchGrounding": false
+    },
+    "output": {
+     "selectedAssetId": "7cff0107-85e4-4c66-9739-507a849fbb11",
+     "assetIds": [
+      "7cff0107-85e4-4c66-9739-507a849fbb11"
+     ]
+    },
+    "inputs": {
+     "prompt": "5b692f33-2c87-48c4-961b-07da50c18ccc",
+     "referenceImages": [
+      "c592c090-b47e-47e0-b8c9-c44758bd612a"
+     ]
+    }
+   },
+   {
+    "id": "5b692f33-2c87-48c4-961b-07da50c18ccc",
+    "position": {
+     "x": 1001.3475068940902,
+     "y": 771.9110589270301
+    },
+    "type": "workflowLlm",
+    "params": {
+     "label": "",
+     "model": "gpt-6-sol",
+     "prompt": "make this man on white background. make prompt for nano banana 2.1"
+    },
+    "output": {
+     "selectedAssetId": "d02eba72-ec88-4521-8a85-b4120c6222a4",
+     "assetIds": [
+      "1e0b20c0-f928-45cf-9558-cad6a8db7eae",
+      "d02eba72-ec88-4521-8a85-b4120c6222a4"
+     ]
+    },
+    "inputs": {
+     "referenceImages": [
+      "c592c090-b47e-47e0-b8c9-c44758bd612a"
+     ]
+    }
+   },
+   {
+    "id": "e8adbd83-62dc-401e-ac9c-ed9e73815163",
+    "position": {
+     "x": 664.3358497196737,
+     "y": 148.3550861292149
+    },
+    "type": "inputImage",
+    "params": {
+     "label": ""
+    },
+    "output": {
+     "selectedAssetId": "386b22ad-750e-4dfb-b09a-776e12e96845",
+     "assetIds": [
+      "386b22ad-750e-4dfb-b09a-776e12e96845"
+     ]
+    },
+    "inputs": {}
+   },
+   {
+    "id": "31d35323-9b5b-41a5-a295-6f609715f23a",
+    "position": {
+     "x": 1464.0267550325962,
+     "y": -415.60553231704216
+    },
+    "type": "inputImage",
+    "params": {
+     "label": ""
+    },
+    "output": {
+     "selectedAssetId": "6fbb6b70-ecc1-4577-8ecb-c3b438a085df",
+     "assetIds": [
+      "6fbb6b70-ecc1-4577-8ecb-c3b438a085df"
+     ]
+    },
+    "inputs": {}
+   },
+   {
+    "id": "f7c1dfe6-664c-41f9-ae63-761f0eaf86ef",
+    "position": {
+     "x": 987.9618964461115,
+     "y": -47.124572983328676
+    },
+    "type": "prompt",
+    "params": {
+     "prompt": "Made in Claude not blende"
+    },
+    "output": {
+     "selectedAssetId": null
+    },
+    "inputs": {}
+   },
+   {
+    "id": "8055179e-75b5-4613-ab86-f02328587da4",
+    "position": {
+     "x": 1760.0340514808686,
+     "y": 360.5597861193753
+    },
+    "type": "generateImage",
+    "params": {
+     "label": "",
+     "model": "nano-banana-2-1",
+     "prompt": "",
+     "resolution": "2K",
+     "aspectRatio": "16:9",
+     "thinkingLevel": "HIGH",
+     "searchGrounding": false
+    },
+    "output": {
+     "selectedAssetId": "f227a162-4e16-4e1a-9b5b-800bc39a4c55",
+     "assetIds": [
+      "f227a162-4e16-4e1a-9b5b-800bc39a4c55"
+     ]
+    },
+    "inputs": {
+     "prompt": "517fe302-5124-4836-b4d4-d229a2a6c34e",
+     "referenceImages": [
+      "e8adbd83-62dc-401e-ac9c-ed9e73815163"
+     ]
+    }
+   },
+   {
+    "id": "517fe302-5124-4836-b4d4-d229a2a6c34e",
+    "position": {
+     "x": 1099.6674480934275,
+     "y": 360.5597861193753
+    },
+    "type": "workflowLlm",
+    "params": {
+     "label": "",
+     "model": "gpt-6-sol",
+     "prompt": "make this wooman on white background. make prompt for nano banana 2.1"
+    },
+    "output": {
+     "selectedAssetId": "2d99f5c6-2aa7-4fa3-bc8f-b97a15f03fa3",
+     "assetIds": [
+      "2d99f5c6-2aa7-4fa3-bc8f-b97a15f03fa3"
+     ]
+    },
+    "inputs": {
+     "referenceImages": [
+      "e8adbd83-62dc-401e-ac9c-ed9e73815163"
+     ]
+    }
+   },
+   {
+    "id": "6c64acf0-6c96-4f5b-9985-7161d160eb98",
+    "position": {
+     "x": 664.3358497196737,
+     "y": -189.9232117919246
+    },
+    "type": "inputImage",
+    "params": {
+     "label": ""
+    },
+    "output": {
+     "selectedAssetId": "64f52190-8e9e-4742-8f3a-f53e78c86714",
+     "assetIds": [
+      "64f52190-8e9e-4742-8f3a-f53e78c86714"
+     ]
+    },
+    "inputs": {}
+   },
+   {
+    "id": "2acebda4-34c8-45d3-a072-6515be76ea31",
+    "position": {
+     "x": 987.9618964461115,
+     "y": 42.21676908233974
+    },
+    "type": "inputVideo",
+    "params": {
+     "label": ""
+    },
+    "output": {
+     "selectedAssetId": "2992dd1b-69a4-4888-9ed6-ee6a485aebb4",
+     "assetIds": [
+      "2992dd1b-69a4-4888-9ed6-ee6a485aebb4"
+     ]
+    },
+    "inputs": {}
+   },
+   {
+    "id": "5d71481d-4c0e-4774-9d8b-2e533aeaf824",
+    "position": {
+     "x": 664.3358497196737,
+     "y": -557.1807603346393
+    },
+    "type": "prompt",
+    "params": {
+     "prompt": "$2e"
+    },
+    "output": {
+     "selectedAssetId": null
+    },
+    "inputs": {}
+   },
+   {
+    "id": "09b5bc3a-f222-4fa1-a583-ba007dfcee5b",
+    "position": {
+     "x": 1464.0267550325962,
+     "y": -75.21943497644759
+    },
+    "type": "generateVideo",
+    "params": {
+     "label": "",
+     "model": "seedance_25",
+     "prompt": "",
+     "duration": 12,
+     "resolution": "720p",
+     "aspectRatio": "16:9",
+     "bitrateMode": "high",
+     "audioEnabled": true
+    },
+    "output": {
+     "selectedAssetId": "af3ecd54-5615-4125-8676-6fa1dc1b9a9a",
+     "assetIds": [
+      "dde721ff-e9eb-44dd-87ce-1b8f576bdfdf",
+      "af3ecd54-5615-4125-8676-6fa1dc1b9a9a"
+     ]
+    },
+    "inputs": {
+     "prompt": "5d71481d-4c0e-4774-9d8b-2e533aeaf824",
+     "referenceImages": [
+      "8055179e-75b5-4613-ab86-f02328587da4",
+      "31d35323-9b5b-41a5-a295-6f609715f23a",
+      "5a821a9a-6df2-4667-a319-d7563e1b7ffd",
+      "6c64acf0-6c96-4f5b-9985-7161d160eb98"
+     ],
+     "referenceVideos": [
+      "2acebda4-34c8-45d3-a072-6515be76ea31"
+     ]
+    }
+   },
+   {
+    "id": "8db9c6b5-d09e-46a5-afc0-400eff40dc10",
+    "position": {
+     "x": 1879.9602208476133,
+     "y": -47.124572983328676
+    },
+    "type": "upscale",
+    "params": {
+     "label": "",
+     "quality": "fast",
+     "upscaleFactor": 2,
+     "targetResolution": "1080p"
+    },
+    "output": {
+     "selectedAssetId": "369dfad9-c7b6-4f24-a6ae-05af34034cc5",
+     "assetIds": [
+      "369dfad9-c7b6-4f24-a6ae-05af34034cc5"
+     ]
+    },
+    "inputs": {
+     "referenceVideos": [
+      "09b5bc3a-f222-4fa1-a583-ba007dfcee5b"
+     ]
+    }
+   }
+  ]
+ },
+ "assets": [
+  {
+   "id": "be433336-7ba8-42cf-8e4b-3a82ea5163d8",
+   "type": "uploaded_video",
+   "status": "uploaded",
+   "localFile": "A4_3d_animatic_bolt_cam_walk.mp4",
+   "data": {
+    "duration": 10,
+    "name": "bolt_cam_walk_preview.mp4",
+    "assetSource": "upload"
+   },
+   "createdAt": "2026-10-11T12:43:05.593Z"
+  },
+  {
+   "id": "386b22ad-750e-4dfb-b09a-776e12e96845",
+   "type": "uploaded_image",
+   "status": "uploaded",
+   "localFile": "A1_input_woman_original.png",
+   "data": {
+    "name": "hf_20261011_085833_1aa3f278-26f6-4bdb-9a4c-8464198e6c35.png",
+    "assetSource": "upload"
+   },
+   "createdAt": "2026-10-11T12:43:36.702Z"
+  },
+  {
+   "id": "6fbb6b70-ecc1-4577-8ecb-c3b438a085df",
+   "type": "uploaded_image",
+   "status": "uploaded",
+   "localFile": "A2_input_diesel_bag.png",
+   "data": {
+    "name": "image.png",
+    "assetSource": "upload"
+   },
+   "createdAt": "2026-10-11T12:45:02.304Z"
+  },
+  {
+   "id": "843a7f83-58e1-466e-b806-2a8ced2dd78c",
+   "type": "seedance_25",
+   "status": "generated",
+   "localFile": "A5_seedance_take1_motion_transfer.mp4",
+   "data": {
+    "prompt": "Use @Video1 strictly as the motion and camera reference: copy the walk cycle, step timing, body posture, arm positions and the exact camera choreography frame-for-frame — smooth tracking shot in front of her, then two fast robotic bolt-cam snap push-ins to her face with hard stops and short holds, fast pull-outs, then a quick whip orbit to the right while the camera keeps following her as she continues walking. Do not copy the blocky 3D look, proportions or materials from @Video1.\n\nReplace the 3D character with the real woman from @Image1: same face, sleek black bob with heavy fringe, amber-tinted sunglasses, black fuzzy mohair crew-neck sweater over a white shirt with pointed collar and long white cuffs showing, black high-waisted wide-leg trousers, pointed snakeskin-print shoes. Keep her identity and outfit exactly as in @Image1. Her left hand stays in her trouser pocket the whole time.\n\nIn her right hand she carries the bag from @Image2, held by its two black top handles, swinging naturally with her steps. Reproduce the bag exactly: washed charcoal-black worn canvas, white \"1978 DIESEL FOR SUCCESSFUL LIVING\" print with the white hand-drawn mark and \"ONLY THE BRAVE\" text below, metal eyelets, silver buckle clips on the straps, side zips, loose strap ends. Correct size relative to her body, real weight and physics.\n\nSetting: the seamless warm-grey paper studio from @Image1, soft directional key light from the left, darker falloff to the right, natural soft floor shadow. Editorial fashion film look, 35mm, slight film grain, muted warm grade, realistic motion blur on the fast camera moves. 10 seconds, 16:9, 1080p.\n\nAvoid: changing her face or outfit, bag in the wrong hand, extra bags, warped or misspelled bag text, morphing hands, sliding feet, the 3D blocky style, extra people, logos other than the bag print.",
+    "aspectRatio": "16:9",
+    "duration": 10,
+    "outputDuration": 10.1,
+    "resolution": "720p",
+    "audioEnabled": true,
+    "assetSource": "platform",
+    "workflowRunId": "1cdd357a-4a50-4a7f-b58f-95ea4c18b4a5",
+    "workflowNodeId": "0a11044b-665b-44bb-829f-bdf4ac4ec3bc"
+   },
+   "createdAt": "2026-10-11T13:05:18.799Z"
+  },
+  {
+   "id": "2ae6ea5c-627f-42f4-add2-fc98aa817da0",
+   "type": "upscaled_video",
+   "status": "generated",
+   "localFile": "A7_upscale_take1_1440p.mp4",
+   "data": {
+    "duration": 10.1,
+    "outputDuration": 10.133333,
+    "assetSource": "platform",
+    "workflowRunId": "4b9040c2-775e-4d32-853d-7e0fed45abd3",
+    "workflowNodeId": "80cb1c75-22f3-47ec-8322-dabfaa7b54b8"
+   },
+   "createdAt": "2026-10-11T13:21:15.033Z"
+  },
+  {
+   "id": "2d99f5c6-2aa7-4fa3-bc8f-b97a15f03fa3",
+   "type": "llm",
+   "status": "generated",
+   "localFile": null,
+   "data": {
+    "prompt": "make this wooman on white background. make prompt for nano banana 2.1",
+    "model": "gpt-6-sol",
+    "assetSource": "platform",
+    "generatedText": "**Nano Banana 2.1 prompt:**\n\nUse the attached image as the reference. Keep the same woman, face, hairstyle, sunglasses, outfit, pose, beige tote bag, and shoes. Replace only the existing background and floor with a seamless pure white studio background (#FFFFFF). Preserve her full body and the entire bag in frame, with clean edges, natural studio lighting, and a subtle shadow beneath her feet. Do not change her appearance or add any objects.",
+    "workflowRunId": "c21fc435-9867-4d7a-b5da-0bc978102e28",
+    "workflowNodeId": "8687368c-db26-4ec5-938a-d4f99d8cfb97"
+   },
+   "createdAt": "2026-10-11T13:44:24.649Z"
+  },
+  {
+   "id": "7b76aacf-dc0a-4da4-bd8f-082ceb2af0c7",
+   "type": "uploaded_image",
+   "status": "uploaded",
+   "localFile": "B1_input_man_original.png",
+   "data": {
+    "name": "image.png",
+    "assetSource": "upload"
+   },
+   "createdAt": "2026-10-11T13:50:52.741Z"
+  },
+  {
+   "id": "f227a162-4e16-4e1a-9b5b-800bc39a4c55",
+   "type": "nano-banana-2-1",
+   "status": "generated",
+   "localFile": "A3_nanobanana_woman_white_studio.png",
+   "data": {
+    "prompt": "**Nano Banana 2.1 prompt:**\n\nUse the attached image as the reference. Keep the same woman, face, hairstyle, sunglasses, outfit, pose, beige tote bag, and shoes. Replace only the existing background and floor with a seamless pure white studio background (#FFFFFF). Preserve her full body and the entire bag in frame, with clean edges, natural studio lighting, and a subtle shadow beneath her feet. Do not change her appearance or add any objects.",
+    "aspectRatio": "16:9",
+    "resolution": "2K",
+    "assetSource": "platform",
+    "workflowRunId": "f523367c-4e30-4f33-885c-003f46b5f2b0",
+    "workflowNodeId": "bfd4263f-56bf-4f9a-a603-b573ff72dea4"
+   },
+   "createdAt": "2026-10-11T13:50:56.130Z"
+  },
+  {
+   "id": "1e0b20c0-f928-45cf-9558-cad6a8db7eae",
+   "type": "llm",
+   "status": "generated",
+   "localFile": null,
+   "data": {
+    "prompt": "make this wooman on white background. make prompt for nano banana 2.1",
+    "model": "gpt-6-sol",
+    "assetSource": "platform",
+    "generatedText": "**Nano Banana 2.1 prompt:**\n\nUse the uploaded photo as the reference. Transform the person into a woman while keeping the same full-body pose, head turned to the side, outfit, cream beret, striped tie, brown shoulder bag, and black shoes. Give her natural feminine facial features and remove the facial hair. Replace the wall and floor with a seamless pure white studio background. Preserve realistic clothing details and proportions, use soft even studio lighting, and keep her entire body visible from hat to shoes.",
+    "workflowRunId": "25502ba7-3db5-47ae-bfc2-af5eab5c2f6b",
+    "workflowNodeId": "5b692f33-2c87-48c4-961b-07da50c18ccc"
+   },
+   "createdAt": "2026-10-11T13:51:54.889Z"
+  },
+  {
+   "id": "d02eba72-ec88-4521-8a85-b4120c6222a4",
+   "type": "llm",
+   "status": "generated",
+   "localFile": null,
+   "data": {
+    "prompt": "make this man on white background. make prompt for nano banana 2.1",
+    "model": "gpt-6-sol",
+    "assetSource": "platform",
+    "generatedText": "**Nano Banana 2.1 prompt:**\n\nUse the attached photo as the reference. Keep the man exactly as he appears—same face, expression, pose, proportions, cream beret, dark jacket, striped tie, wide-leg trousers, black shoes, and brown shoulder bag. Replace the entire existing background and floor with a seamless pure white studio background. Preserve his full body in frame, with clean, natural edges and a subtle realistic shadow beneath his shoes. Do not change his clothing, accessories, or facial features.",
+    "workflowRunId": "acd34dc5-5401-4d40-9a08-2426d3757073",
+    "workflowNodeId": "5b692f33-2c87-48c4-961b-07da50c18ccc"
+   },
+   "createdAt": "2026-10-11T13:56:11.230Z"
+  },
+  {
+   "id": "c50766a6-3894-436e-8e5a-cab1dee9bb2c",
+   "type": "seedance_25",
+   "status": "generated",
+   "localFile": "A6_seedance_take2_camera_only_SELECTED.mp4",
+   "data": {
+    "prompt": "@Image1 — the person: keep her face, skin tone, hairstyle and outfit exactly as in the photo.\n@Image2 — the bag: use this exact Diesel bag (shape, size, material, color, logo, hardware, straps). Do not redesign it or change the logo.\n@Video1 — camera only: copy only the camera path, framing, timing and speed of the camera moves. Take nothing else from this video (no character, no body motion, no style, no lighting).\n\nScene: a seamless white photo studio with a soft white cyclorama, even diffused light and soft contact shadows under her feet. Clean high-end fashion editorial look.\n\nSubject: a young woman with a sleek black bob and a heavy blunt fringe. She wears oversized amber-brown tinted sunglasses, a small silver earring, an oversized fuzzy black mohair crew-neck sweater, and a crisp white shirt underneath. The shirt's pointed collar sits over the neckline and its long white cuffs stick out below the sleeves. She also wears high-waisted black pleated wide-leg trousers that fall to the floor and pointed snakeskin-print shoes.\n\nAction: she walks toward the camera with a natural, calm, elegant runway gait. Her steps are even and her feet plant firmly on the floor. Her body moves smoothly and fluidly, with no twitching. Her right hand carries the Diesel bag from @Image2 by its handles, and it swings gently with realistic weight. Her left hand stays in her trouser pocket the whole time, with the white cuff visible.\n\nCamera: a bolt-cam robotic arm move that follows the camera path of @Video1. It tracks her walk, glides fast into an extreme close-up of her eye behind the amber lens with a shallow depth of field, pulls back out, then makes a sweeping orbit to her right while she keeps walking. Every move is perfectly smooth, like a motion-control rig: dynamic speed with eased acceleration and deceleration. There is zero camera shake, zero jitter, no handheld feel and no wobble.\n\nStyle: photorealistic, 1080p, 60fps, silky smooth motion, natural skin texture, true fabric detail, accurate snakeskin pattern, accurate Diesel branding exactly as in @Image2.\n\nNegative: camera shake, jitter, stutter, frame skipping, flicker, the body motion or character from @Video1, beige tote, any other bag, changed logo, extra hands, the hand coming out of the pocket, face morphing, warped legs, sliding feet, text",
+    "aspectRatio": "16:9",
+    "duration": 10,
+    "outputDuration": 10.1,
+    "resolution": "720p",
+    "audioEnabled": true,
+    "assetSource": "platform",
+    "workflowRunId": "8b8e05c2-b9ba-4678-be5e-16dd50503b7d",
+    "workflowNodeId": "0a11044b-665b-44bb-829f-bdf4ac4ec3bc"
+   },
+   "createdAt": "2026-10-11T13:58:36.765Z"
+  },
+  {
+   "id": "a819bb46-7bf2-4054-a7ad-0d202dda7b62",
+   "type": "upscaled_video",
+   "status": "generated",
+   "localFile": "A8_FINAL_solo_diesel_walk_1440p.mp4",
+   "data": {
+    "duration": 10.1,
+    "outputDuration": 10.133333,
+    "assetSource": "platform",
+    "workflowRunId": "d05633a9-afe7-426b-86d8-03da14ed1664",
+    "workflowNodeId": "80cb1c75-22f3-47ec-8322-dabfaa7b54b8"
+   },
+   "createdAt": "2026-10-11T14:17:11.136Z"
+  },
+  {
+   "id": "7cff0107-85e4-4c66-9739-507a849fbb11",
+   "type": "nano-banana-2-1",
+   "status": "generated",
+   "localFile": "B2_nanobanana_man_white_studio.png",
+   "data": {
+    "prompt": "**Nano Banana 2.1 prompt:**\n\nUse the attached photo as the reference. Keep the man exactly as he appears—same face, expression, pose, proportions, cream beret, dark jacket, striped tie, wide-leg trousers, black shoes, and brown shoulder bag. Replace the entire existing background and floor with a seamless pure white studio background. Preserve his full body in frame, with clean, natural edges and a subtle realistic shadow beneath his shoes. Do not change his clothing, accessories, or facial features.",
+    "aspectRatio": "16:9",
+    "resolution": "2K",
+    "assetSource": "platform",
+    "workflowRunId": "32dff2cd-0e95-4782-9c63-bd286e7e7421",
+    "workflowNodeId": "5a821a9a-6df2-4667-a319-d7563e1b7ffd"
+   },
+   "createdAt": "2026-10-11T14:17:17.951Z"
+  },
+  {
+   "id": "64f52190-8e9e-4742-8f3a-f53e78c86714",
+   "type": "uploaded_image",
+   "status": "uploaded",
+   "localFile": "B3_input_pink_star_sunglasses.png",
+   "data": {
+    "name": "image.png",
+    "assetSource": "upload"
+   },
+   "createdAt": "2026-10-11T14:18:57.280Z"
+  },
+  {
+   "id": "2992dd1b-69a4-4888-9ed6-ee6a485aebb4",
+   "type": "uploaded_video",
+   "status": "uploaded",
+   "localFile": "B4_3d_animatic_bolt_duo.mp4",
+   "data": {
+    "duration": 12,
+    "name": "bolt_duo_small.mp4",
+    "assetSource": "upload"
+   },
+   "createdAt": "2026-10-11T15:42:45.796Z"
+  },
+  {
+   "id": "dde721ff-e9eb-44dd-87ce-1b8f576bdfdf",
+   "type": "seedance_25",
+   "status": "generated",
+   "localFile": "B5_seedance_take1_full_transform.mp4",
+   "data": {
+    "prompt": "Photorealistic live-action cinematic video. Keep exactly the same motion, timing, camera movement, framing and composition as the input video, but transform everything into real life: real people, real skin, real fabric, real materials. Replace the blocky low-poly characters with realistic humans.\n\nCharacters: a stylish young woman with a sleek dark bob haircut, wearing a black minimalist suit with a white shirt collar, carrying a black leather briefcase. A man in a navy-blue business suit with a white shirt and a gold belt buckle.\n\nSetting: seamless light-grey photo studio cyclorama background, soft diffused studio lighting, clean minimal look, background stays the same throughout.\n\nAction following the input video: the woman walks toward the camera, camera slowly pushes in to a close-up of her face. The man in the navy suit throws a pair of pink sunglasses, they fly through the air in slow motion, spinning, and land perfectly on the woman’s face. She stays calm and confident, with a subtle satisfied smile.\n\nShot on ARRI Alexa with 50mm and 85mm prime lenses, shallow depth of field, creamy bokeh, natural motion blur, realistic skin texture with pores, natural colors, subtle film grain, high-end fashion commercial style, ultra-detailed, hyperrealistic, 4K.",
+    "aspectRatio": "16:9",
+    "duration": 12,
+    "outputDuration": 12.073991,
+    "resolution": "720p",
+    "audioEnabled": true,
+    "assetSource": "platform",
+    "workflowRunId": "2c87f125-4c21-4b19-963f-d09fc2266393",
+    "workflowNodeId": "09b5bc3a-f222-4fa1-a583-ba007dfcee5b"
+   },
+   "createdAt": "2026-10-11T15:47:03.842Z"
+  },
+  {
+   "id": "af3ecd54-5615-4125-8676-6fa1dc1b9a9a",
+   "type": "seedance_25",
+   "status": "generated",
+   "localFile": "B6_seedance_take2_timecoded_SELECTED.mp4",
+   "data": {
+    "prompt": "Photorealistic high-end fashion commercial, 12 seconds. Use the input video ONLY as a reference for shot composition, framing, cut timing and camera movement. Do NOT copy the character animation from the input: generate completely new, natural, fluid human motion, realistic body weight, natural gestures and facial expressions.\n\nCharacters: a young woman with a sleek dark bob haircut and bangs, light freckles, small gold earrings, wearing a black oversized sweater over a white shirt with a sharp collar, black wide trousers, holding a black leather bag. A young man in a dark navy workwear jacket with silver buckles.\nSetting: seamless light-grey studio cyclorama, soft diffused studio lighting, same background in every shot.\n\n0–2s: Wide full-body shot, camera slowly pushes in. The woman walks into frame with a relaxed confident stride, bag swinging naturally, she stops and shifts her weight.\n\n2–3s: Medium shot, continuing slow push-in. She turns her head slightly, glances to the side as if hearing someone, then a fast whip-pan with motion blur.\n\n3–4s: Medium shot of the man, he smiles playfully and tosses a pair of pink wraparound sunglasses with a casual flick of the wrist.\n\n4–7s: Camera tracks the sunglasses flying through the empty grey space in slow motion, spinning and catching the light.\n\n7–9s: Extreme close-up of the woman’s face, the sunglasses land on her face, she reaches up and adjusts them with her fingers, natural small head movement.\n\n9–12s: Locked extreme close-up, she looks straight into the lens through the pink lenses, a subtle confident half-smile, slight blink, gentle breathing.\n\nShot on ARRI Alexa, 35mm, 50mm and 85mm prime lenses, shallow depth of field, creamy bokeh, natural motion blur, realistic skin texture, subtle film grain, natural colors, ultra-detailed, 4K.",
+    "aspectRatio": "16:9",
+    "duration": 12,
+    "outputDuration": 12.073991,
+    "resolution": "720p",
+    "audioEnabled": true,
+    "assetSource": "platform",
+    "workflowRunId": "1743a0f9-7ebf-4474-ac6f-2a970977292a",
+    "workflowNodeId": "09b5bc3a-f222-4fa1-a583-ba007dfcee5b"
+   },
+   "createdAt": "2026-10-11T16:07:24.817Z"
+  },
+  {
+   "id": "369dfad9-c7b6-4f24-a6ae-05af34034cc5",
+   "type": "upscaled_video",
+   "status": "generated",
+   "localFile": "B7_FINAL_duo_sunglasses_toss_1440p.mp4",
+   "data": {
+    "duration": 12.073991,
+    "outputDuration": 12.073991,
+    "assetSource": "platform",
+    "workflowRunId": "56b94f98-99e1-4a8d-a4aa-28b6e96787d0",
+    "workflowNodeId": "8db9c6b5-d09e-46a5-afc0-400eff40dc10"
+   },
+   "createdAt": "2026-10-11T16:18:06.142Z"
+  }
+ ]
+}

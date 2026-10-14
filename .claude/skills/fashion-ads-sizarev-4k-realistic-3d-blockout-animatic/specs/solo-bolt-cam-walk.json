@@ -1,0 +1,23 @@
+{
+  "name": "AD01 solo bolt-cam walk (recreates bolt_cam_walk_preview.mp4)",
+  "duration": 10, "fps": 24, "width": 1280, "height": 720,
+  "studio": { "floor": "#d3d0ca", "wall": "#8f8b85", "key": "left" },
+  "characters": [
+    {
+      "id": "woman",
+      "look": { "hair": "#262628", "top": "#1b1b1d", "bottom": "#151517", "shoes": "#a99c88", "glasses": "#c98a3a", "shirt": "#f5f5f3" },
+      "bag": { "hand": "right", "color": "#d9cdb6", "w": 0.34, "h": 0.36, "d": 0.1, "handle": "#cbbfa7" },
+      "pose": { "leftHandInPocket": true },
+      "path": [ { "t": 0, "pos": [0, -6], "face": 0 }, { "t": 10, "pos": [0, 2.2], "face": 0, "ease": "linear" } ]
+    }
+  ],
+  "camera": [
+    { "t": 0,   "target": "woman.hips", "dist": 5.2, "az": 4,  "el": 6,  "fov": 34 },
+    { "t": 2.4, "target": "woman.hips", "dist": 4.6, "az": 0,  "el": 5,  "fov": 34, "ease": "linear" },
+    { "t": 3.1, "target": "woman.head", "dist": 1.05, "az": 2, "el": 0,  "fov": 30, "targetOffset": [0, 0.02, 0], "ease": "inOutQuint" },
+    { "t": 4.3, "target": "woman.head", "dist": 0.9, "az": 6, "el": 0,  "fov": 30, "targetOffset": [0, 0.02, 0], "ease": "linear" },
+    { "t": 5.2, "target": "woman.hips", "dist": 4.4, "az": 10, "el": 6,  "fov": 34, "ease": "inOutQuint" },
+    { "t": 8.2, "target": "woman.hips", "dist": 4.6, "az": 78, "el": 8,  "fov": 34, "ease": "inOutCubic" },
+    { "t": 10,  "target": "woman.hips", "dist": 4.8, "az": 96, "el": 8,  "fov": 34, "ease": "outCubic" }
+  ]
+}
